@@ -14,6 +14,7 @@
 		7540B2A31A78E78500862DF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7540B2A21A78E78500862DF6 /* Images.xcassets */; };
 		7540B2A61A78E78500862DF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7540B2A41A78E78500862DF6 /* LaunchScreen.xib */; };
 		7540B2B21A78E78500862DF6 /* RatingControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7540B2B11A78E78500862DF6 /* RatingControllerTests.m */; };
+		7540B2BD1A79077800862DF6 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7540B2BC1A79077800862DF6 /* RatingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		7540B2AB1A78E78500862DF6 /* RatingControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatingControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7540B2B01A78E78500862DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7540B2B11A78E78500862DF6 /* RatingControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RatingControllerTests.m; sourceTree = "<group>"; };
+		7540B2BB1A79077800862DF6 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
+		7540B2BC1A79077800862DF6 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				7540B29A1A78E78500862DF6 /* AppDelegate.m */,
 				7540B29C1A78E78500862DF6 /* ViewController.h */,
 				7540B29D1A78E78500862DF6 /* ViewController.m */,
+				7540B2BB1A79077800862DF6 /* RatingView.h */,
+				7540B2BC1A79077800862DF6 /* RatingView.m */,
 				7540B29F1A78E78500862DF6 /* Main.storyboard */,
 				7540B2A21A78E78500862DF6 /* Images.xcassets */,
 				7540B2A41A78E78500862DF6 /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				7540B29E1A78E78500862DF6 /* ViewController.m in Sources */,
 				7540B29B1A78E78500862DF6 /* AppDelegate.m in Sources */,
 				7540B2981A78E78500862DF6 /* main.m in Sources */,
+				7540B2BD1A79077800862DF6 /* RatingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -344,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RatingController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RatingController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

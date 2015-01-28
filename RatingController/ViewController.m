@@ -10,18 +10,32 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *ratingBackgroundView;
+@property (nonatomic, strong) UIView *maskView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.ratingView.zeroStarImage = [UIImage imageNamed:@"emptystar"];
+    self.ratingView.oneStarImage = [UIImage imageNamed:@"star"];
+    self.ratingView.halfStarImage = [UIImage imageNamed:@"halfstar"];
+    
+    self.ratingView.rating = 0.0;
+    
+    self.ratingView.editable = YES;
+    
+    self.ratingView.maxRating = 5;
+    
+    self.ratingView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)ratingView:(RatingView *)ratingView didChangeRatingTo:(float)rating {
+    
+    self.ratingLabel.text = [NSString stringWithFormat:@"Rating: %.1f", rating];
 }
 
 @end

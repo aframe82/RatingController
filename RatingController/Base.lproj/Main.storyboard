@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,51 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Fu-Yr-uoQ">
+                                <rect key="frame" x="16" y="20" width="568" height="100"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8df-ua-oc3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHJ-6a-XCU" customClass="RatingView">
+                                <rect key="frame" x="16" y="253" width="568" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="sA4-Tm-J3k"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KR-sN-Cc8">
+                                <rect key="frame" x="16" y="355" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WsL-UH-D5i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7KR-sN-Cc8" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="0RU-ah-QzH"/>
+                            <constraint firstItem="7KR-sN-Cc8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="1OK-tP-Qw2"/>
+                            <constraint firstItem="iHJ-6a-XCU" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="3B2-NT-p8P"/>
+                            <constraint firstAttribute="centerX" secondItem="iHJ-6a-XCU" secondAttribute="centerX" id="9WD-ND-HgD"/>
+                            <constraint firstItem="iHJ-6a-XCU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="DIb-MX-wRn"/>
+                            <constraint firstAttribute="centerY" secondItem="iHJ-6a-XCU" secondAttribute="centerY" id="GI5-ss-beK"/>
+                            <constraint firstItem="7KR-sN-Cc8" firstAttribute="top" secondItem="iHJ-6a-XCU" secondAttribute="bottom" constant="8" id="HXz-Ay-e9u"/>
+                            <constraint firstItem="0Fu-Yr-uoQ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="SWA-77-sPC"/>
+                            <constraint firstItem="0Fu-Yr-uoQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="WDi-d1-9t9"/>
+                            <constraint firstAttribute="centerX" secondItem="0Fu-Yr-uoQ" secondAttribute="centerX" id="jnt-qU-NSM"/>
+                            <constraint firstItem="0Fu-Yr-uoQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="sSR-2S-ja9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ratingBackgroundView" destination="0Fu-Yr-uoQ" id="JMK-2d-igN"/>
+                        <outlet property="ratingLabel" destination="7KR-sN-Cc8" id="pBN-s4-19g"/>
+                        <outlet property="ratingView" destination="iHJ-6a-XCU" id="gzd-mP-LZq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

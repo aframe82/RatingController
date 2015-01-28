@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RatingView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <RatingViewDelegate>
+
+@property (weak, nonatomic) IBOutlet RatingView *ratingView;
+
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 
 
 @end
